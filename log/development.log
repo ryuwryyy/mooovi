@@ -684,3 +684,289 @@ Started GET "/" for 127.0.0.1 at 2014-11-01 22:32:03 +0900
 Processing by TopController#index as HTML
   Rendered top/index.html.erb within layouts/review_site (0.0ms)
 Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-16 22:43:03 +0900
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/review_site (4.3ms)
+Completed 200 OK in 4941ms (Views: 4929.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-01-16 22:43:09 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-01-16 22:43:09 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-01-16 22:43:09 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-01-16 22:43:09 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-01-16 22:43:09 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-01-16 22:43:09 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-01-16 22:43:09 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-01-16 22:43:09 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-01-16 22:43:09 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-01-16 22:43:09 +0900
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-01-16 22:43:09 +0900
+  [1m[36m (44.6ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (29.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducts (20170118201532)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/ericfesta/projects/mooovi/db/migrate/20170118201532_create_products.rb:7)
+  [1m[35m (12.9ms)[0m  CREATE TABLE `products` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255), `image_url` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170118201532')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (1.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (17.7ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('オオカミ少女と黒王子', 'http://image.eiga.k-img.com/images/movie/82939/poster2/200.jpg?1456105504', '2017-01-19 03:15:41', '2017-01-19 03:15:41')
+  [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ヒメアノ～ル', 'http://image.eiga.k-img.com/images/movie/82031/200x133.jpg?1458617968', '2017-01-19 03:15:42', '2017-01-19 03:15:42')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エンド・オブ・キングダム', 'http://image.eiga.k-img.com/images/movie/84396/poster2/200.jpg?1456105395', '2017-01-19 03:15:42', '2017-01-19 03:15:42')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('素敵なサプライズ　ブリュッセルの奇妙な代理店', 'http://image.eiga.k-img.com/images/movie/83818/poster2/200.jpg?1452581497', '2017-01-19 03:15:42', '2017-01-19 03:15:42')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('手をつないでかえろうよ　シャングリラの向こうで', 'http://image.eiga.k-img.com/images/movie/83316/photo/704e52e243018fe7/320.jpg?1460515565', '2017-01-19 03:15:42', '2017-01-19 03:15:42')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('復活', 'http://image.eiga.k-img.com/images/movie/84404/photo/b1ea2006aea01769/320.jpg?1462845161', '2017-01-19 03:15:43', '2017-01-19 03:15:43')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('あのひと', 'http://image.eiga.k-img.com/images/movie/82788/photo/e8e36657b9a98933/320.jpg?1460950312', '2017-01-19 03:15:43', '2017-01-19 03:15:43')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('或る終焉', 'http://image.eiga.k-img.com/images/movie/83700/poster2/200.jpg?1456993166', '2017-01-19 03:15:43', '2017-01-19 03:15:43')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('CONFLICT 最大の抗争', 'http://image.eiga.k-img.com/images/movie/83914/photo/ef49227bafc3396f/320.jpg?1462161535', '2017-01-19 03:15:43', '2017-01-19 03:15:43')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('燐寸少女　マッチショウジョ', 'http://image.eiga.k-img.com/images/movie/84204/photo/c71da94191642fcc/320.jpg?1461206311', '2017-01-19 03:15:43', '2017-01-19 03:15:43')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エルヴィス、我が心の歌', 'http://image.eiga.k-img.com/images/movie/84452/poster2/200.jpg?1456978768', '2017-01-19 03:15:44', '2017-01-19 03:15:44')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('女ヒエラルキー底辺少女', 'http://image.eiga.k-img.com/images/movie/84904/photo/242d864dadbc8856/320.jpg?1462879638', '2017-01-19 03:15:44', '2017-01-19 03:15:44')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('リリカルスクールの未知との遭遇', 'http://image.eiga.k-img.com/images/movie/84165/photo/941cd4573c4e2310/320.jpg?1458876636', '2017-01-19 03:15:44', '2017-01-19 03:15:44')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('若葉のころ', 'http://image.eiga.k-img.com/images/movie/84418/poster2/200.jpg?1456916251', '2017-01-19 03:15:44', '2017-01-19 03:15:44')[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('スノーホワイト　氷の王国', 'http://image.eiga.k-img.com/images/movie/83708/photo/3306840c771af07d/320.jpg?1458877882', '2017-01-19 03:15:45', '2017-01-19 03:15:45')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('神様メール', 'http://image.eiga.k-img.com/images/movie/83805/poster2/200.jpg?1458803848', '2017-01-19 03:15:45', '2017-01-19 03:15:45')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('マイケル・ムーアの世界侵略のススメ', 'http://image.eiga.k-img.com/images/movie/84410/poster2/200.jpg?1458179953', '2017-01-19 03:15:45', '2017-01-19 03:15:45')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('海よりもまだ深く', 'http://image.eiga.k-img.com/images/movie/83901/poster2/200.jpg?1458007228', '2017-01-19 03:15:45', '2017-01-19 03:15:45')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ディストラクション・ベイビーズ', 'http://image.eiga.k-img.com/images/movie/82632/poster2/200.jpg?1457666272', '2017-01-19 03:15:46', '2017-01-19 03:15:46')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('少女椿', 'http://image.eiga.k-img.com/images/movie/84316/poster2/200.jpg?1455242124', '2017-01-19 03:15:46', '2017-01-19 03:15:46')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (18.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddRateToProducts (20170119034943)
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (19.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20170119034943')[0m
+  [1m[35m (3.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (8.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+
+  [1m[36m (0.3ms)[0m  [1mSHOW CREATE TABLE `products`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (14.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (8.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (1.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36mActiveRecord::SchemaMigration Load (15.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (5.9ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36mActiveRecord::SchemaMigration Load (14.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddDirectorToString (20170119063810)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (9.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20170119063810')[0m
+  [1m[35m (4.7ms)[0m  COMMIT
+Migrating to AddDirectorToProducts (20170119064014)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170119064014')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddDetailToProducts (20170119064051)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20170119064051')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to AddOpenDateToProducts (20170119064114)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170119064114')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (5.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36mActiveRecord::SchemaMigration Load (12.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateReviews (20170119073058)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/ericfesta/projects/mooovi/db/migrate/20170119073058_create_reviews.rb:8)
+  [1m[35m (84.4ms)[0m  CREATE TABLE `reviews` (`id` int(11) auto_increment PRIMARY KEY, `nickname` varchar(255), `rate` int(11), `review` text, `product_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170119073058')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (2.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'reviews'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `reviews`
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'reviews'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `reviews`
+  [1m[36mReview Load (8.4ms)[0m  [1mSELECT  `reviews`.* FROM `reviews`  ORDER BY `reviews`.`id` ASC LIMIT 1[0m
